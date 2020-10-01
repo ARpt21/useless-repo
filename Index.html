@@ -1,0 +1,42 @@
+<html>
+    <script>
+        function display(a)
+        {
+            i=0;
+            for(i in a)
+            {
+                document.write(a[i]+"</br>");
+            }
+            i++;
+        }
+        function sort(a)
+        {
+            i=0;
+            for(i=0;i<a.length-1;i++)
+                for(j=i+1;j<a.length;j++)
+                    if(a[i]>a[j])
+                    {
+                        temp=a[i];
+                        a[i]=a[j];
+                        a[j]=temp;
+                    }
+        }
+    </script>
+    <body>
+        <center>
+        <script>
+        var ar=new Array(10,20,2,5,3,6,15,12);
+        var arr=new Array("Monday","Tuesday","wednesday","thursday","Friday","Saturday","Sunday");
+        document.write("Content of the array : "+"</br></br>");
+        display(ar);
+        sort(ar);
+        document.write("</br>"+"Content of the array after sorting : "+"</br></br>");
+        display(ar);
+        for(i in arr)
+        {
+            document.write(arr[i]+"</br>");
+        }
+        </script>
+        </center>
+    </body>
+</html>
